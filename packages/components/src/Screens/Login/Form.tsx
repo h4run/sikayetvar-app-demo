@@ -16,6 +16,7 @@ import Button from "../../Button";
 import { API_URL } from "../../utils";
 
 import Toast from "./Toast";
+import { getBottomSpace } from "react-native-iphone-x-helper";
 
 export type FormProps = {
   onSuccess(data: { access_token: string }): any;
@@ -60,7 +61,7 @@ const Form = ({ onSuccess }: FormProps) => {
       setIsLoading(false);
 
       if (Platform.OS !== "web")
-        toastRef.current.show("E-posta ya da şifreniz hatalı.", 700);
+        toastRef.current.show("E-posta ya da Şifre hatalı.", 700);
     }
   };
 
@@ -99,6 +100,14 @@ const Form = ({ onSuccess }: FormProps) => {
         </TouchableOpacity>
       </View>
       <View style={styles.buttonContainer}>
+        {Platform.OS !== "web" && (
+          <Toast
+            ref={toastRef}
+            position="top"
+            positionValue={-60}
+            style={{ backgroundColor: "#ff5555" }}
+          />
+        )}
         <Button
           isLoading={isLoading}
           color="green"
@@ -106,14 +115,6 @@ const Form = ({ onSuccess }: FormProps) => {
           onPress={login}
         />
       </View>
-
-      {Platform.OS !== "web" && (
-        <Toast
-          ref={toastRef}
-          positionValue={200}
-          style={{ backgroundColor: "#ff5555" }}
-        />
-      )}
     </>
   );
 };
@@ -134,6 +135,7 @@ const styles = StyleSheet.create({
     textDecorationLine: "underline"
   },
   buttonContainer: {
+    position: "relative",
     paddingBottom: 11.5,
     marginTop: 30
   }
