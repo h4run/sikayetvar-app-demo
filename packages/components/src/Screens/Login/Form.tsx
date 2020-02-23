@@ -19,17 +19,17 @@ export type FormProps = {
 };
 
 const Form = ({ onSuccess }: FormProps) => {
+  const [username, setUsername] = useState();
+  const [password, setPassword] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const login = async () => {
     if (isLoading) return;
 
-    // @ts-ignore
-    if (!emailInputRef.current?._lastNativeText) {
+    if (!username) {
       if (emailInputRef.current) emailInputRef.current.focus();
       return;
     }
-    // @ts-ignore
-    if (!passwordInputRef.current?._lastNativeText) {
+    if (!password) {
       if (passwordInputRef.current) passwordInputRef.current.focus();
       return;
     }
@@ -40,10 +40,8 @@ const Form = ({ onSuccess }: FormProps) => {
 
     fd.append("grant_type", "password");
     fd.append("client_id", "musteriyebakJwt");
-    // @ts-ignore
-    fd.append("username", emailInputRef.current?._lastNativeText);
-    // @ts-ignore
-    fd.append("password", passwordInputRef.current?._lastNativeText);
+    fd.append("username", username);
+    fd.append("password", password);
 
     try {
       const response = await fetch(API_URL + "/auth-member/auth/login", {
@@ -76,6 +74,7 @@ const Form = ({ onSuccess }: FormProps) => {
         keyboardType="email-address"
         returnKeyType="next"
         autoCapitalize="none"
+        onChangeText={username => setUsername(username)}
         onSubmitEditing={() => {
           if (passwordInputRef.current) passwordInputRef.current.focus();
         }}
@@ -84,6 +83,7 @@ const Form = ({ onSuccess }: FormProps) => {
         forwardedRef={passwordInputRef}
         placeholder="Şifre"
         returnKeyType="go"
+        onChangeText={password => setPassword(password)}
         onSubmitEditing={login}
       />
 
