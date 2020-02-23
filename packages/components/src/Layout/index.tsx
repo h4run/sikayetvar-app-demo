@@ -4,7 +4,9 @@ import {
   StyleSheet,
   View,
   Platform,
-  Dimensions
+  Dimensions,
+  KeyboardAvoidingView,
+  StatusBar
 } from "react-native";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 
@@ -17,21 +19,33 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <ScrollView
-      style={styles.scrollView}
-      bounces={false}
-      keyboardShouldPersistTaps="handled"
-      contentContainerStyle={Platform.OS === "web" && { alignItems: "center" }}
-    >
-      <View style={styles.container}>
-        <View style={styles.content}>{children}</View>
-        <FooterButton />
-      </View>
-    </ScrollView>
+    <>
+      <StatusBar barStyle="dark-content" />
+
+      <KeyboardAvoidingView
+        style={styles.keyboardView}
+        behavior="height"
+        enabled
+      >
+        <ScrollView
+          style={styles.scrollView}
+          keyboardShouldPersistTaps="handled"
+          contentContainerStyle={
+            Platform.OS === "web" && { alignItems: "center" }
+          }
+        >
+          <View style={styles.container}>
+            <View style={styles.content}>{children}</View>
+            <FooterButton />
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
+  keyboardView: { flex: 1, flexDirection: "column", justifyContent: "center" },
   scrollView: {
     flex: 1,
     backgroundColor: "#f2f5f8"

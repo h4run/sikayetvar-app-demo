@@ -3,12 +3,10 @@ import {
   Image,
   StyleSheet,
   ImageBackground,
-  Text,
   SafeAreaView,
-  View,
   TouchableOpacity
 } from "react-native";
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import { getStatusBarHeight, ifIphoneX } from "react-native-iphone-x-helper";
 
 export default () => (
   <ImageBackground
@@ -36,8 +34,9 @@ export default () => (
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    marginTop: getStatusBarHeight(),
-    height: 123
+    marginTop: ifIphoneX(null, null) ? getStatusBarHeight() : 0,
+    paddingTop: 30,
+    height: 124
   },
   content: {
     height: 44,

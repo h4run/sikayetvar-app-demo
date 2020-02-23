@@ -3,7 +3,8 @@ import {
   View,
   TextInput as NativeTextInput,
   TouchableOpacity,
-  StyleSheet
+  StyleSheet,
+  Platform
 } from "react-native";
 
 import Text from "../../Text";
@@ -13,6 +14,8 @@ import CheckBox from "../../CheckBoxInput";
 import Button from "../../Button";
 
 import { API_URL } from "../../utils";
+
+import Toast from "./Toast";
 
 export type FormProps = {
   onSuccess(data: { access_token: string }): any;
@@ -55,18 +58,21 @@ const Form = ({ onSuccess }: FormProps) => {
     } catch (error) {
       // console.error(error);
       setIsLoading(false);
+
+      if (Platform.OS !== "web")
+        toastRef.current.show("E-posta ya da şifreniz hatalı.", 700);
     }
   };
 
   const passwordInputRef = useRef<NativeTextInput>(null);
   const emailInputRef = useRef<NativeTextInput>(null);
+  const toastRef = useRef<any>();
   return (
     <>
       <View style={styles.header}>
         <Text fontWeight={500}>ya da</Text>
         <Text fontWeight={700}>Bilgilerinizi doldurarak hızlıca üye olun</Text>
       </View>
-
       <TextInput
         forwardedRef={emailInputRef}
         placeholder="E-posta"
@@ -75,9 +81,7 @@ const Form = ({ onSuccess }: FormProps) => {
         returnKeyType="next"
         autoCapitalize="none"
         onChangeText={username => setUsername(username)}
-        onSubmitEditing={() => {
-          if (passwordInputRef.current) passwordInputRef.current.focus();
-        }}
+        onSubmitEditing={login}
       />
       <PasswordInput
         forwardedRef={passwordInputRef}
@@ -86,7 +90,6 @@ const Form = ({ onSuccess }: FormProps) => {
         onChangeText={password => setPassword(password)}
         onSubmitEditing={login}
       />
-
       <View style={styles.footer}>
         <CheckBox label="Beni Hatırla" />
         <TouchableOpacity>
@@ -95,7 +98,6 @@ const Form = ({ onSuccess }: FormProps) => {
           </Text>
         </TouchableOpacity>
       </View>
-
       <View style={styles.buttonContainer}>
         <Button
           isLoading={isLoading}
@@ -104,6 +106,14 @@ const Form = ({ onSuccess }: FormProps) => {
           onPress={login}
         />
       </View>
+
+      {Platform.OS !== "web" && (
+        <Toast
+          ref={toastRef}
+          positionValue={200}
+          style={{ backgroundColor: "#ff5555" }}
+        />
+      )}
     </>
   );
 };
@@ -125,7 +135,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     paddingBottom: 11.5,
-    marginTop: 50
+    marginTop: 30
   }
 });
 

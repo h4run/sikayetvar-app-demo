@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, View } from "react-native";
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import { getStatusBarHeight, ifIphoneX } from "react-native-iphone-x-helper";
 
 export default () => (
   <View style={styles.container}>
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginBottom: 30
   },
   bg: {
-    marginTop: getStatusBarHeight(),
+    marginTop: ifIphoneX(null, null) ? getStatusBarHeight() : 0,
     width: 148,
     height: 74
   },

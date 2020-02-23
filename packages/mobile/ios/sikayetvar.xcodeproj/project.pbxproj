@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* sikayetvarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* sikayetvarTests.m */; };
+		081B1063399C418CB90B9C0F /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED56C2C4ABEC41069F4BCDD0 /* Montserrat-SemiBold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -17,13 +18,12 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* sikayetvarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* sikayetvarTests.m */; };
-		79F22FDD448D66AAEA5EAC65 /* libPods-sikayetvar-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C411AD4D876FF09C4145C7C1 /* libPods-sikayetvar-tvOSTests.a */; };
-		EA96C3ADB0062FBBC713B357 /* libPods-sikayetvar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2A7911673BECF243AD0AFA /* libPods-sikayetvar.a */; };
-		FFC6356B33C2913A7A459200 /* libPods-sikayetvar-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456429721C6B23242C16220D /* libPods-sikayetvar-tvOS.a */; };
 		63DDA08720924E08BE17B654 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC8677BBDD3744A5B15EC24C /* Montserrat-Bold.ttf */; };
 		73E8503558C140AABE0105F7 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23099769ADA343DF8EA265D7 /* Montserrat-Medium.ttf */; };
+		79F22FDD448D66AAEA5EAC65 /* libPods-sikayetvar-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C411AD4D876FF09C4145C7C1 /* libPods-sikayetvar-tvOSTests.a */; };
 		D1BF8DDE7B414E2E84BE0AFA /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F91DC57F270424DB90AABF2 /* Montserrat-Regular.ttf */; };
-		081B1063399C418CB90B9C0F /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED56C2C4ABEC41069F4BCDD0 /* Montserrat-SemiBold.ttf */; };
+		EA96C3ADB0062FBBC713B357 /* libPods-sikayetvar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2A7911673BECF243AD0AFA /* libPods-sikayetvar.a */; };
+		FFC6356B33C2913A7A459200 /* libPods-sikayetvar-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456429721C6B23242C16220D /* libPods-sikayetvar-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,24 +57,24 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = sikayetvar/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = sikayetvar/main.m; sourceTree = "<group>"; };
 		1888E6FC20CF78ACA5E89C41 /* Pods-sikayetvar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvar.debug.xcconfig"; path = "Target Support Files/Pods-sikayetvar/Pods-sikayetvar.debug.xcconfig"; sourceTree = "<group>"; };
+		23099769ADA343DF8EA265D7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Medium.ttf"; path = "../assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* sikayetvar-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sikayetvar-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* sikayetvar-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sikayetvar-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E1217E1E81DD2A7519A8A58 /* Pods-sikayetvar-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvar-tvOS.release.xcconfig"; path = "Target Support Files/Pods-sikayetvar-tvOS/Pods-sikayetvar-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		332F934DC8CB4922E8C2EB80 /* Pods-sikayetvarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvarTests.release.xcconfig"; path = "Target Support Files/Pods-sikayetvarTests/Pods-sikayetvarTests.release.xcconfig"; sourceTree = "<group>"; };
 		38725D9BF24793FBEAF6D373 /* Pods-sikayetvar-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvar-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-sikayetvar-tvOSTests/Pods-sikayetvar-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		456429721C6B23242C16220D /* libPods-sikayetvar-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sikayetvar-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F91DC57F270424DB90AABF2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Regular.ttf"; path = "../assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		80A71BEBA18653AAC5A0EAE5 /* Pods-sikayetvar-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvar-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-sikayetvar-tvOSTests/Pods-sikayetvar-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		BA0CB7250979924594CEDD19 /* Pods-sikayetvar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvar.release.xcconfig"; path = "Target Support Files/Pods-sikayetvar/Pods-sikayetvar.release.xcconfig"; sourceTree = "<group>"; };
 		C411AD4D876FF09C4145C7C1 /* libPods-sikayetvar-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sikayetvar-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73BE9E1F71587306E251315 /* Pods-sikayetvarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sikayetvarTests.debug.xcconfig"; path = "Target Support Files/Pods-sikayetvarTests/Pods-sikayetvarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EB096A5BAF95E3F2E15D3B48 /* libPods-sikayetvarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sikayetvarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB2A7911673BECF243AD0AFA /* libPods-sikayetvar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-sikayetvar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8677BBDD3744A5B15EC24C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-Bold.ttf"; path = "../assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		EC8677BBDD3744A5B15EC24C /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; name = "Montserrat-Bold.ttf"; path = "../assets/fonts/Montserrat-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		23099769ADA343DF8EA265D7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; name = "Montserrat-Medium.ttf"; path = "../assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4F91DC57F270424DB90AABF2 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; name = "Montserrat-Regular.ttf"; path = "../assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		ED56C2C4ABEC41069F4BCDD0 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBold.ttf"; path = "../assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ED56C2C4ABEC41069F4BCDD0 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-SemiBold.ttf"; path = "../assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +207,7 @@
 			sourceTree = "<group>";
 		};
 		877EFB75AA0D42D0ACF038BA /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				EC8677BBDD3744A5B15EC24C /* Montserrat-Bold.ttf */,
 				23099769ADA343DF8EA265D7 /* Montserrat-Medium.ttf */,
@@ -216,7 +216,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -310,7 +309,11 @@
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 5WD9GRPR8H;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 5WD9GRPR8H;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -608,6 +611,7 @@
 			baseConfigurationReference = D73BE9E1F71587306E251315 /* Pods-sikayetvarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5WD9GRPR8H;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -632,6 +636,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 5WD9GRPR8H;
 				INFOPLIST_FILE = sikayetvarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -653,6 +658,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = 5WD9GRPR8H;
 				INFOPLIST_FILE = sikayetvar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -672,6 +678,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5WD9GRPR8H;
 				INFOPLIST_FILE = sikayetvar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
