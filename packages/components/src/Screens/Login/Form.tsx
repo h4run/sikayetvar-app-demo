@@ -50,8 +50,7 @@ const Form = ({ onSuccess }: FormProps) => {
     try {
       const response = await fetch(API_URL + "/auth-member/auth/login", {
         method: "POST",
-        body: fd,
-        credentials: "include"
+        body: fd
       });
       if (response.status !== 200) throw response;
       const data = await response.json();

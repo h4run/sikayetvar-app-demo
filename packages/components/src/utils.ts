@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Platform } from "react-native";
 
 export const colors = {
   primary: "#002a5b",
@@ -29,5 +30,9 @@ export const useToggle = (initialValue: boolean): [boolean, () => void] => {
 
 export const gutter = 7.5;
 
-export const API_URL = "https://api.sikayetvar.com";
+// export const API_URL = "https://api.sikayetvar.com";
+export const API_URL =
+  Platform.OS === "web"
+    ? "https://sikayetvar.herokuapp.com"
+    : "https://api.sikayetvar.com";
 export const FILES_URL = "https://files.sikayetvar.com";
