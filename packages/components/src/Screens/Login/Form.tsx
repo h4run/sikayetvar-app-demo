@@ -50,7 +50,15 @@ const Form = ({ onSuccess }: FormProps) => {
     try {
       const response = await fetch(API_URL + "/auth-member/auth/login", {
         method: "POST",
-        body: fd
+        body: new URLSearchParams({
+          grant_type: "password",
+          client_id: "sikayetvar",
+          username: username,
+          password: password
+        }),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        }
       });
       if (response.status !== 200) throw response;
       const data = await response.json();
