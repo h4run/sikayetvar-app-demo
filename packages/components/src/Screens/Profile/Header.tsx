@@ -3,6 +3,8 @@ import { View, Image, StyleSheet } from "react-native";
 
 import Text from "../../Text";
 
+import { FILES_URL } from "../../utils";
+
 //{ avatar, name }
 
 type Props = {
@@ -16,8 +18,7 @@ const Header = ({ name, picture }: Props) => {
       <Image
         style={styles.avatar}
         source={{
-          uri:
-            "https://image.freepik.com/free-vector/sunset-mountains-with-pine-forest_7993-2327.jpg"
+          uri: FILES_URL + picture
         }}
       />
       <Text fontWeight={700} style={styles.name}>

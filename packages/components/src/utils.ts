@@ -29,4 +29,5 @@ export const useToggle = (initialValue: boolean): [boolean, () => void] => {
 
 export const gutter = 7.5;
 
-export const API_URL = "https://s-api.sikayetvar.com";
+export const API_URL = "https://api.sikayetvar.com";
+export const FILES_URL = "https://files.sikayetvar.com";
