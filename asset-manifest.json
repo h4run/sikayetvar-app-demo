@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/sikayetvar-app-demo/static/js/main.2c6382b4.chunk.js",
+    "main.js.map": "/sikayetvar-app-demo/static/js/main.2c6382b4.chunk.js.map",
+    "runtime-main.js": "/sikayetvar-app-demo/static/js/runtime-main.8f1be6cf.js",
+    "runtime-main.js.map": "/sikayetvar-app-demo/static/js/runtime-main.8f1be6cf.js.map",
+    "static/js/2.8bc9face.chunk.js": "/sikayetvar-app-demo/static/js/2.8bc9face.chunk.js",
+    "static/js/2.8bc9face.chunk.js.map": "/sikayetvar-app-demo/static/js/2.8bc9face.chunk.js.map",
+    "index.html": "/sikayetvar-app-demo/index.html",
+    "precache-manifest.2672e86dd12406b701d32baab6f8d718.js": "/sikayetvar-app-demo/precache-manifest.2672e86dd12406b701d32baab6f8d718.js",
+    "service-worker.js": "/sikayetvar-app-demo/service-worker.js",
+    "static/js/2.8bc9face.chunk.js.LICENSE.txt": "/sikayetvar-app-demo/static/js/2.8bc9face.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/sikayetvar-app-demo/static/media/logo.84d95e0e.png",
+    "static/media/logo_bg.png": "/sikayetvar-app-demo/static/media/logo_bg.940ad82b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f1be6cf.js",
+    "static/js/2.8bc9face.chunk.js",
+    "static/js/main.2c6382b4.chunk.js"
+  ]
+}
