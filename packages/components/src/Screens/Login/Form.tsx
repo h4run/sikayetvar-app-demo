@@ -18,6 +18,14 @@ import { API_URL } from "../../utils";
 import Toast from "./Toast";
 import { getBottomSpace } from "react-native-iphone-x-helper";
 
+interface Idata {
+  grant_type: string;
+  client_id: string;
+  username: string;
+  password: string;
+  [key: string]: string;
+}
+
 export type FormProps = {
   onSuccess(data: { access_token: string }): any;
 };
@@ -40,25 +48,38 @@ const Form = ({ onSuccess }: FormProps) => {
 
     setIsLoading(true);
 
+    const data: Idata = {
+      grant_type: "password",
+      client_id: "sikayetvar",
+      username,
+      password
+    };
+
     const fd = new FormData();
 
-    fd.append("grant_type", "password");
-    fd.append("client_id", "sikayetvar");
-    fd.append("username", username);
-    fd.append("password", password);
+    Object.keys(data).forEach(key => {
+      fd.append(key, data[key]);
+    });
+
+    let options = {};
+
+    if (Platform.OS === "web") {
+      options = {
+        body: new URLSearchParams(data),
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        }
+      };
+    } else {
+      options = {
+        body: fd
+      };
+    }
 
     try {
       const response = await fetch(API_URL + "/auth-member/auth/login", {
         method: "POST",
-        body: new URLSearchParams({
-          grant_type: "password",
-          client_id: "sikayetvar",
-          username: username,
-          password: password
-        }),
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
-        }
+        ...options
       });
       if (response.status !== 200) throw response;
       const data = await response.json();
