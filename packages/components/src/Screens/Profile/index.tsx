@@ -25,7 +25,6 @@ export default ({ token }: Props) => {
       });
       if (response.status !== 200) throw response;
       const data = await response.json();
-      console.log(data);
       setData(data);
     } catch (error) {
       console.error(error);
