@@ -27,7 +27,7 @@ export default ({ token }: Props) => {
       const data = await response.json();
       setData(data);
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   };
   useEffect(() => {
